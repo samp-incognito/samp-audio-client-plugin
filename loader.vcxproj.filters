@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="lib\boost\system\src\error_code.cpp">
+      <Filter>lib\boost\system\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\thread\src\win32\thread.cpp">
+      <Filter>lib\boost\thread\src\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\thread\src\win32\tss_dll.cpp">
+      <Filter>lib\boost\thread\src\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\thread\src\win32\tss_pe.cpp">
+      <Filter>lib\boost\thread\src\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\thread\src\future.cpp">
+      <Filter>lib\boost\thread\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\thread\src\tss_null.cpp">
+      <Filter>lib\boost\thread\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\boost\system\src\local_free_on_destruction.hpp">
+      <Filter>lib\boost\system\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\loader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{b2b397a5-15c5-4ea4-8c0e-a67582bf7f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost">
+      <UniqueIdentifier>{ec66a37f-077c-45e9-b895-ab4fc8c53f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\system">
+      <UniqueIdentifier>{4e5d9d59-a0c8-4100-a5c4-eed447a8e7f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\system\src">
+      <UniqueIdentifier>{5bec655b-3cd8-4710-9257-b6c6ef5c5def}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\thread">
+      <UniqueIdentifier>{6020ee8f-a91f-4a7c-bb55-a863aee0c2b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\thread\src">
+      <UniqueIdentifier>{30552276-ef66-450a-9c27-7fa83ed87a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\thread\src\win32">
+      <UniqueIdentifier>{77de5386-1c97-45cb-8974-1c1d0e973620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{34cf8eef-2043-4f30-aaa2-e4a79fa95e1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

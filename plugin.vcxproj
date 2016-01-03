@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98891499-D683-4622-9BCF-DCCEAD0A6674}</ProjectGuid>
+    <RootNamespace>audio</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_ALL_NO_LIB;BOOST_ASIO_DISABLE_IOCP;NOMINMAX;URDL_DISABLE_SSL;URDL_HEADER_ONLY;WIN32_LEAN_AND_MEAN;_DEBUG;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>audio.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>bass.dll</DelayLoadDLLs>
+      <AdditionalDependencies>bass.lib;bassmix.lib;shell32.lib;shlwapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\BASS</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_ALL_NO_LIB;BOOST_ASIO_DISABLE_IOCP;NDEBUG;NOMINMAX;URDL_DISABLE_SSL;URDL_HEADER_ONLY;WIN32_LEAN_AND_MEAN;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>audio.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <DelayLoadDLLs>bass.dll</DelayLoadDLLs>
+      <AdditionalDependencies>bass.lib;bassmix.lib;shell32.lib;shlwapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\BASS</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\boost\filesystem\src\codecvt_error_category.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\operations.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\path.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\path_traits.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\portability.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\unique_path.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\utf8_codecvt_facet.cpp" />
+    <ClCompile Include="lib\boost\filesystem\src\windows_file_codecvt.cpp" />
+    <ClCompile Include="lib\boost\system\src\error_code.cpp" />
+    <ClCompile Include="src\audio.cpp" />
+    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\network.cpp" />
+    <ClCompile Include="src\plugin.cpp" />
+    <ClCompile Include="src\program.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\boost\filesystem\src\windows_file_codecvt.hpp" />
+    <ClInclude Include="lib\boost\system\src\local_free_on_destruction.hpp" />
+    <ClInclude Include="src\audio.h" />
+    <ClInclude Include="src\core.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\network.h" />
+    <ClInclude Include="src\plugin.h" />
+    <ClInclude Include="src\program.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="audio.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

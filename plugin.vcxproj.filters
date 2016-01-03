@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ResourceCompile Include="audio.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{0f9b87af-b1de-4394-9fe0-9ebb66dd579f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost">
+      <UniqueIdentifier>{de93b9a5-7515-48ef-9743-63133347807a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\filesystem">
+      <UniqueIdentifier>{1304b7b7-c31d-4b90-a0ee-1e970df2383d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\filesystem\src">
+      <UniqueIdentifier>{9f686d64-a6ca-4076-bb61-a7deb3798aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\system">
+      <UniqueIdentifier>{cd5504f5-0297-4d30-a17c-f7c51d58dd6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\boost\system\src">
+      <UniqueIdentifier>{c3c96eb1-7ab7-4b5f-8d3a-d5d0fc1fe1b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{834efbcd-6f5c-482f-b59e-3d9fd995963f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\boost\filesystem\src\codecvt_error_category.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\operations.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\path.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\path_traits.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\portability.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\unique_path.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\utf8_codecvt_facet.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\filesystem\src\windows_file_codecvt.cpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\boost\system\src\error_code.cpp">
+      <Filter>lib\boost\system\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plugin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\program.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\boost\filesystem\src\windows_file_codecvt.hpp">
+      <Filter>lib\boost\filesystem\src</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\boost\system\src\local_free_on_destruction.hpp">
+      <Filter>lib\boost\system\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\network.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plugin.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\program.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
